@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Hábitos - GrowTrack</title>
+    <meta name="description" content="Gerencie todos os seus hábitos em um só lugar no GrowTrack.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS Específico da Página -->
+    <link rel="stylesheet" href="css/listagem.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="GrowTrack Logo">
+                    <span>GrowTrack</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="dashboard.html" class="nav__link">Dashboard</a>
+                    <a href="listagem.html" class="nav__link nav__link--active">Meus Hábitos</a>
+                    <a href="login.html" class="nav__link">Sair</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header__content">
+                    <h1>Meus Hábitos</h1>
+                    <p>Gerencie todos os seus hábitos e acompanhe seu progresso</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filters Section -->
+        <section class="filters-section">
+            <div class="container">
+                <div class="filters-content">
+                    <div class="filters-left">
+                        <div class="filter-group">
+                            <label for="category-filter" class="filter-label">Categoria:</label>
+                            <select id="category-filter" class="filter-select">
+                                <option value="">Todas as categorias</option>
+                                <option value="saude">Saúde</option>
+                                <option value="produtividade">Produtividade</option>
+                                <option value="financeiro">Financeiro</option>
+                                <option value="pessoal">Pessoal</option>
+                                <option value="estudos">Estudos</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="status-filter" class="filter-label">Status:</label>
+                            <select id="status-filter" class="filter-select">
+                                <option value="">Todos os status</option>
+                                <option value="ativo">Ativo</option>
+                                <option value="pausado">Pausado</option>
+                                <option value="concluido">Concluído</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filters-right">
+                        <a href="novo-habito.html" class="btn btn--primary">
+                            + Novo hábito
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habits List -->
+        <section class="habits-list-section">
+            <div class="container">
+                <div class="habits-table">
+                    <div class="table-header">
+                        <div class="table-cell">Hábito</div>
+                        <div class="table-cell">Categoria</div>
+                        <div class="table-cell">Frequência</div>
+                        <div class="table-cell">Última conclusão</div>
+                        <div class="table-cell">Streak</div>
+                        <div class="table-cell">Status</div>
+                        <div class="table-cell">Ações</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="habit-cell">
+                                <div class="habit-icon">💧</div>
+                                <div class="habit-info">
+                                    <div class="habit-name">Beber água</div>
+                                    <div class="habit-desc">8 copos por dia</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <span class="badge badge--primary">Saúde</span>
+                        </div>
+                        <div class="table-cell">Diário</div>
+                        <div class="table-cell">Hoje</div>
+                        <div class="table-cell">
+                            <div class="streak-info">
+                                <span class="streak-number">15</span>
+                                <span class="streak-label">dias</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <span class="badge badge--success">Ativo</span>
+                        </div>
+                        <div class="table-cell">
+                            <div class="actions-cell">
+                                <a href="detalhe.html" class="btn btn--ghost btn--sm">Editar</a>
+                                <button class="btn btn--ghost btn--sm btn--danger" onclick="deleteHabit(this)">Excluir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="habit-cell">
+                                <div class="habit-icon">🏃‍♂️</div>
+                                <div class="habit-info">
+                                    <div class="habit-name">Exercícios</div>
+                                    <div class="habit-desc">30 min de atividade física</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <span class="badge badge--primary">Saúde</span>
+                        </div>
+                        <div class="table-cell">Diário</div>
+                        <div class="table-cell">Hoje</div>
+                        <div class="table-cell">
+                            <div class="streak-info">
+                                <span class="streak-number">12</span>
+                                <span class="streak-label">dias</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <span class="badge badge--success">Ativo</span>
+                        </div>
+                        <div class="table-cell">
+                            <div class="actions-cell">
+                                <a href="detalhe.html" class="btn btn--ghost btn--sm">Editar</a>
+                                <button class="btn btn--ghost btn--sm btn--danger" onclick="deleteHabit(this)">Excluir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="habit-cell">
+                                <div class="habit-icon">📚</div>
+                                <div class="habit-info">
+                                    <div class="habit-name">Leitura</div>
+                                    <div class="habit-desc">20 páginas por dia</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <span class="badge badge--secondary">Estudos</span>
+                        </div>
+                        <div class="table-cell">Diário</div>
+                        <div class="table-cell">Ontem</div>
+                        <div class="table-cell">
+                            <div class="streak-info">
+                                <span class="streak-number">8</span>
+                                <span class="streak-label">dias</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <span class="badge badge--warning">Pausado</span>
+                        </div>
+                        <div class="table-cell">
+                            <div class="actions-cell">
+                                <a href="detalhe.html" class="btn btn--ghost btn--sm">Editar</a>
+                                <button class="btn btn--ghost btn--sm btn--danger" onclick="deleteHabit(this)">Excluir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="habit-cell">
+                                <div class="habit-icon">🧘‍♀️</div>
+                                <div class="habit-info">
+                                    <div class="habit-name">Meditação</div>
+                                    <div class="habit-desc">10 minutos diários</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <span class="badge badge--primary">Saúde</span>
+                        </div>
+                        <div class="table-cell">Diário</div>
+                        <div class="table-cell">2 dias atrás</div>
+                        <div class="table-cell">
+                            <div class="streak-info">
+                                <span class="streak-number">5</span>
+                                <span class="streak-label">dias</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <span class="badge badge--success">Ativo</span>
+                        </div>
+                        <div class="table-cell">
+                            <div class="actions-cell">
+                                <a href="detalhe.html" class="btn btn--ghost btn--sm">Editar</a>
+                                <button class="btn btn--ghost btn--sm btn--danger" onclick="deleteHabit(this)">Excluir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="habit-cell">
+                                <div class="habit-icon">💤</div>
+                                <div class="habit-info">
+                                    <div class="habit-name">Dormir cedo</div>
+                                    <div class="habit-desc">22h - 7h de sono</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <span class="badge badge--primary">Saúde</span>
+                        </div>
+                        <div class="table-cell">Diário</div>
+                        <div class="table-cell">Hoje</div>
+                        <div class="table-cell">
+                            <div class="streak-info">
+                                <span class="streak-number">20</span>
+                                <span class="streak-label">dias</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <span class="badge badge--success">Ativo</span>
+                        </div>
+                        <div class="table-cell">
+                            <div class="actions-cell">
+                                <a href="detalhe.html" class="btn btn--ghost btn--sm">Editar</a>
+                                <button class="btn btn--ghost btn--sm btn--danger" onclick="deleteHabit(this)">Excluir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="habit-cell">
+                                <div class="habit-icon">💰</div>
+                                <div class="habit-info">
+                                    <div class="habit-name">Economizar</div>
+                                    <div class="habit-desc">R$ 20,00 por dia</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <span class="badge badge--secondary">Financeiro</span>
+                        </div>
+                        <div class="table-cell">Diário</div>
+                        <div class="table-cell">3 dias atrás</div>
+                        <div class="table-cell">
+                            <div class="streak-info">
+                                <span class="streak-number">3</span>
+                                <span class="streak-label">dias</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <span class="badge badge--success">Ativo</span>
+                        </div>
+                        <div class="table-cell">
+                            <div class="actions-cell">
+                                <a href="detalhe.html" class="btn btn--ghost btn--sm">Editar</a>
+                                <button class="btn btn--ghost btn--sm btn--danger" onclick="deleteHabit(this)">Excluir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="habit-cell">
+                                <div class="habit-icon">📝</div>
+                                <div class="habit-info">
+                                    <div class="habit-name">Diário</div>
+                                    <div class="habit-desc">Escrever 1 página</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <span class="badge badge--secondary">Pessoal</span>
+                        </div>
+                        <div class="table-cell">Diário</div>
+                        <div class="table-cell">1 semana atrás</div>
+                        <div class="table-cell">
+                            <div class="streak-info">
+                                <span class="streak-number">0</span>
+                                <span class="streak-label">dias</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <span class="badge badge--gray">Concluído</span>
+                        </div>
+                        <div class="table-cell">
+                            <div class="actions-cell">
+                                <a href="detalhe.html" class="btn btn--ghost btn--sm">Editar</a>
+                                <button class="btn btn--ghost btn--sm btn--danger" onclick="deleteHabit(this)">Excluir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__text">
+                    © 2024 GrowTrack - Plataforma de Controle de Hábitos
+                </p>
+                <p class="footer__text">
+                    Desenvolvido por <a href="#" class="footer__link">Guilherme Aquino</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de confirmação -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Confirmar exclusão</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Tem certeza que deseja excluir este hábito? Esta ação não pode ser desfeita.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--ghost" onclick="closeModal()">Cancelar</button>
+                <button class="btn btn--danger" onclick="confirmDelete()">Excluir</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let habitToDelete = null;
+
+        function deleteHabit(button) {
+            habitToDelete = button.closest('.table-row');
+            document.getElementById('deleteModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('deleteModal').style.display = 'none';
+            habitToDelete = null;
+        }
+
+        function confirmDelete() {
+            if (habitToDelete) {
+                habitToDelete.style.animation = 'fadeOut 0.3s ease-out';
+                setTimeout(() => {
+                    habitToDelete.remove();
+                }, 300);
+            }
+            closeModal();
+        }
+
+        // Fechar modal ao clicar fora
+        window.onclick = function(event) {
+            const modal = document.getElementById('deleteModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Adicionar animação de fade out
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeOut {
+                from {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translateX(-20px);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

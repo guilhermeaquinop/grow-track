@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - GrowTrack</title>
+    <meta name="description" content="Faça login na sua conta GrowTrack e continue acompanhando seus hábitos.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS Específico da Página -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="GrowTrack Logo">
+                    <span>GrowTrack</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="dashboard.html" class="nav__link">Dashboard</a>
+                    <a href="login.html" class="nav__link nav__link--active">Entrar</a>
+                    <a href="cadastro.html" class="btn btn--primary btn--sm">Cadastro</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-container">
+                    <div class="auth-card">
+                        <div class="auth-header">
+                            <h1>Bem-vindo de volta!</h1>
+                            <p>Entre na sua conta para continuar acompanhando seus hábitos</p>
+                        </div>
+
+                        <form class="auth-form" action="dashboard.html" method="get">
+                            <div class="form-group">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    class="form-input" 
+                                    placeholder="seu@email.com"
+                                    required
+                                    autocomplete="email"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password" class="form-label">Senha</label>
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    name="password" 
+                                    class="form-input" 
+                                    placeholder="Sua senha"
+                                    required
+                                    autocomplete="current-password"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-checkbox">
+                                    <input type="checkbox" id="remember" name="remember">
+                                    <label for="remember">Lembrar-me neste dispositivo</label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn--primary btn--lg auth-submit">
+                                Entrar
+                            </button>
+                        </form>
+
+                        <div class="auth-footer">
+                            <p>
+                                <a href="#" class="auth-link">Esqueceu sua senha?</a>
+                            </p>
+                            <p>
+                                Não tem uma conta? 
+                                <a href="cadastro.html" class="auth-link">Cadastre-se gratuitamente</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="auth-illustration">
+                        <div class="illustration-content">
+                            <div class="illustration-icon">🎯</div>
+                            <h3>Continue sua jornada</h3>
+                            <p>Mantenha o foco nos seus objetivos e veja seu progresso crescer a cada dia.</p>
+                            
+                            <div class="stats-preview">
+                                <div class="stat-item">
+                                    <div class="stat-number">7</div>
+                                    <div class="stat-label">Hábitos ativos</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">15</div>
+                                    <div class="stat-label">Dias de streak</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">89%</div>
+                                    <div class="stat-label">Taxa de sucesso</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__text">
+                    © 2024 GrowTrack - Plataforma de Controle de Hábitos
+                </p>
+                <p class="footer__text">
+                    Desenvolvido por <a href="#" class="footer__link">Guilherme Aquino</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

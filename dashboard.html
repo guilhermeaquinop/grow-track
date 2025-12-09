@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - GrowTrack</title>
+    <meta name="description" content="Acompanhe seu progresso e mantenha seus hábitos em dia no GrowTrack.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS Específico da Página -->
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="GrowTrack Logo">
+                    <span>GrowTrack</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="dashboard.html" class="nav__link nav__link--active">Dashboard</a>
+                    <a href="listagem.html" class="nav__link">Meus Hábitos</a>
+                    <a href="login.html" class="nav__link">Sair</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="container">
+                <div class="welcome-content">
+                    <h1>Olá, Marina! 👋</h1>
+                    <p>Vamos manter o foco nos seus objetivos de hoje</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-content">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">Hábitos ativos</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🔥</div>
+                        <div class="stat-content">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Dias de streak</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-content">
+                            <div class="stat-number">89%</div>
+                            <div class="stat-label">Taxa de sucesso</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-content">
+                            <div class="stat-number">1,247</div>
+                            <div class="stat-label">Pontos totais</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Chart Section -->
+        <section class="chart-section">
+            <div class="container">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h2>Progresso dos últimos 7 dias</h2>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: var(--primary-color);"></div>
+                                <span>Concluído</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: var(--gray-300);"></div>
+                                <span>Pendente</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-content">
+                        <div class="chart-bars">
+                            <div class="chart-day">
+                                <div class="day-label">Seg</div>
+                                <div class="day-bars">
+                                    <div class="bar" style="height: 80%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 60%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 40%; background-color: var(--gray-300);"></div>
+                                    <div class="bar" style="height: 90%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 70%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 50%; background-color: var(--gray-300);"></div>
+                                </div>
+                            </div>
+                            <div class="chart-day">
+                                <div class="day-label">Ter</div>
+                                <div class="day-bars">
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 80%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 90%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 60%; background-color: var(--gray-300);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 80%; background-color: var(--primary-color);"></div>
+                                </div>
+                            </div>
+                            <div class="chart-day">
+                                <div class="day-label">Qua</div>
+                                <div class="day-bars">
+                                    <div class="bar" style="height: 90%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 70%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 50%; background-color: var(--gray-300);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                </div>
+                            </div>
+                            <div class="chart-day">
+                                <div class="day-label">Qui</div>
+                                <div class="day-bars">
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 80%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 90%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 70%; background-color: var(--primary-color);"></div>
+                                </div>
+                            </div>
+                            <div class="chart-day">
+                                <div class="day-label">Sex</div>
+                                <div class="day-bars">
+                                    <div class="bar" style="height: 60%; background-color: var(--gray-300);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 80%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 90%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 40%; background-color: var(--gray-300);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                </div>
+                            </div>
+                            <div class="chart-day">
+                                <div class="day-label">Sáb</div>
+                                <div class="day-bars">
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 70%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 50%; background-color: var(--gray-300);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 80%; background-color: var(--primary-color);"></div>
+                                </div>
+                            </div>
+                            <div class="chart-day">
+                                <div class="day-label">Dom</div>
+                                <div class="day-bars">
+                                    <div class="bar" style="height: 80%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 60%; background-color: var(--gray-300);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 90%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 100%; background-color: var(--primary-color);"></div>
+                                    <div class="bar" style="height: 70%; background-color: var(--primary-color);"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Today's Habits Section -->
+        <section class="habits-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Hábitos de hoje</h2>
+                    <a href="listagem.html" class="btn btn--outline btn--sm">Ver todos</a>
+                </div>
+                
+                <div class="habits-grid">
+                    <div class="habit-card completed">
+                        <div class="habit-header">
+                            <div class="habit-icon">💧</div>
+                            <div class="habit-info">
+                                <h3>Beber água</h3>
+                                <p>8/8 copos</p>
+                            </div>
+                            <div class="habit-status">
+                                <div class="status-badge status-badge--success">Concluído</div>
+                            </div>
+                        </div>
+                        <div class="habit-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="habit-actions">
+                            <a href="detalhe.html" class="btn btn--ghost btn--sm">Ver detalhes</a>
+                        </div>
+                    </div>
+
+                    <div class="habit-card completed">
+                        <div class="habit-header">
+                            <div class="habit-icon">🏃‍♂️</div>
+                            <div class="habit-info">
+                                <h3>Exercícios</h3>
+                                <p>30 min caminhada</p>
+                            </div>
+                            <div class="habit-status">
+                                <div class="status-badge status-badge--success">Concluído</div>
+                            </div>
+                        </div>
+                        <div class="habit-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="habit-actions">
+                            <a href="detalhe.html" class="btn btn--ghost btn--sm">Ver detalhes</a>
+                        </div>
+                    </div>
+
+                    <div class="habit-card pending">
+                        <div class="habit-header">
+                            <div class="habit-icon">📚</div>
+                            <div class="habit-info">
+                                <h3>Leitura</h3>
+                                <p>20 páginas</p>
+                            </div>
+                            <div class="habit-status">
+                                <div class="status-badge status-badge--warning">Pendente</div>
+                            </div>
+                        </div>
+                        <div class="habit-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                        <div class="habit-actions">
+                            <button class="btn btn--primary btn--sm" onclick="markComplete(this)">Marcar como feito</button>
+                            <a href="detalhe.html" class="btn btn--ghost btn--sm">Ver detalhes</a>
+                        </div>
+                    </div>
+
+                    <div class="habit-card pending">
+                        <div class="habit-header">
+                            <div class="habit-icon">🧘‍♀️</div>
+                            <div class="habit-info">
+                                <h3>Meditação</h3>
+                                <p>10 minutos</p>
+                            </div>
+                            <div class="habit-status">
+                                <div class="status-badge status-badge--warning">Pendente</div>
+                            </div>
+                        </div>
+                        <div class="habit-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                        <div class="habit-actions">
+                            <button class="btn btn--primary btn--sm" onclick="markComplete(this)">Marcar como feito</button>
+                            <a href="detalhe.html" class="btn btn--ghost btn--sm">Ver detalhes</a>
+                        </div>
+                    </div>
+
+                    <div class="habit-card completed">
+                        <div class="habit-header">
+                            <div class="habit-icon">💤</div>
+                            <div class="habit-info">
+                                <h3>Dormir cedo</h3>
+                                <p>22h - 7h</p>
+                            </div>
+                            <div class="habit-status">
+                                <div class="status-badge status-badge--success">Concluído</div>
+                            </div>
+                        </div>
+                        <div class="habit-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="habit-actions">
+                            <a href="detalhe.html" class="btn btn--ghost btn--sm">Ver detalhes</a>
+                        </div>
+                    </div>
+
+                    <div class="habit-card pending">
+                        <div class="habit-header">
+                            <div class="habit-icon">💰</div>
+                            <div class="habit-info">
+                                <h3>Economizar</h3>
+                                <p>R$ 20,00</p>
+                            </div>
+                            <div class="habit-status">
+                                <div class="status-badge status-badge--warning">Pendente</div>
+                            </div>
+                        </div>
+                        <div class="habit-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                        <div class="habit-actions">
+                            <button class="btn btn--primary btn--sm" onclick="markComplete(this)">Marcar como feito</button>
+                            <a href="detalhe.html" class="btn btn--ghost btn--sm">Ver detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-footer">
+                    <a href="novo-habito.html" class="btn btn--primary">
+                        + Novo hábito
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__text">
+                    © 2024 GrowTrack - Plataforma de Controle de Hábitos
+                </p>
+                <p class="footer__text">
+                    Desenvolvido por <a href="#" class="footer__link">Guilherme Aquino</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function markComplete(button) {
+            const card = button.closest('.habit-card');
+            const statusBadge = card.querySelector('.status-badge');
+            const progressFill = card.querySelector('.progress-fill');
+            const actions = card.querySelector('.habit-actions');
+            
+            // Atualizar status
+            card.classList.remove('pending');
+            card.classList.add('completed');
+            statusBadge.textContent = 'Concluído';
+            statusBadge.className = 'status-badge status-badge--success';
+            
+            // Atualizar progresso
+            progressFill.style.width = '100%';
+            
+            // Remover botão de marcar como feito
+            button.remove();
+            
+            // Adicionar feedback visual
+            card.style.transform = 'scale(1.02)';
+            setTimeout(() => {
+                card.style.transform = '';
+            }, 200);
+        }
+    </script>
+</body>
+</html>

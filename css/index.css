@@ -1,0 +1,223 @@
+/* Estilos específicos da landing page */
+.hero {
+    padding: var(--spacing-20) 0;
+    background: linear-gradient(135deg, var(--light-neutral) 0%, var(--white) 100%);
+}
+
+.hero__content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-16);
+}
+
+.hero__title {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-6);
+    color: var(--dark-neutral);
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.hero__subtitle {
+    font-size: var(--font-size-xl);
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-8);
+    line-height: 1.6;
+}
+
+.hero__actions {
+    display: flex;
+    gap: var(--spacing-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero__image {
+    display: flex;
+    justify-content: center;
+}
+
+.hero__mockup {
+    position: relative;
+}
+
+.mockup__phone {
+    width: 300px;
+    height: 600px;
+    background: var(--dark-neutral);
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: var(--shadow-lg);
+}
+
+.mockup__screen {
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.mockup__header {
+    background: var(--primary-color);
+    padding: var(--spacing-4);
+    display: flex;
+    justify-content: center;
+}
+
+.mockup__dots {
+    display: flex;
+    gap: var(--spacing-1);
+}
+
+.mockup__dots span {
+    width: 8px;
+    height: 8px;
+    background: var(--white);
+    border-radius: 50%;
+}
+
+.mockup__content {
+    flex: 1;
+    padding: var(--spacing-6);
+}
+
+.mockup__habit {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    padding: var(--spacing-4);
+    background: var(--gray-100);
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--spacing-3);
+}
+
+.mockup__habit-icon {
+    font-size: var(--font-size-xl);
+}
+
+.mockup__habit-info {
+    flex: 1;
+}
+
+.mockup__habit-info h4 {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    margin-bottom: var(--spacing-1);
+}
+
+.mockup__habit-info p {
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+    margin: 0;
+}
+
+.mockup__habit-check {
+    font-size: var(--font-size-lg);
+}
+
+.features {
+    padding: var(--spacing-20) 0;
+    background: var(--white);
+}
+
+.features__header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto var(--spacing-16);
+}
+
+.features__header h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-4);
+    color: var(--dark-neutral);
+}
+
+.features__header p {
+    font-size: var(--font-size-lg);
+    color: var(--gray-600);
+}
+
+.features__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-8);
+}
+
+.feature__icon {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-4);
+}
+
+.cta {
+    padding: var(--spacing-20) 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--white);
+}
+
+.cta__content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta__content h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-4);
+    color: var(--white);
+}
+
+.cta__content p {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-8);
+    opacity: 0.9;
+}
+
+.cta .btn--primary {
+    background: var(--white);
+    color: var(--primary-color);
+    border-color: var(--white);
+}
+
+.cta .btn--primary:hover {
+    background: var(--gray-100);
+    color: var(--primary-color);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .hero__title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .hero__subtitle {
+        font-size: var(--font-size-lg);
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .mockup__phone {
+        width: 250px;
+        height: 500px;
+    }
+
+    .features__grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Hábito - GrowTrack</title>
+    <meta name="description" content="Crie um novo hábito e comece sua jornada de transformação no GrowTrack.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS Específico da Página -->
+    <link rel="stylesheet" href="css/novo-habito.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="GrowTrack Logo">
+                    <span>GrowTrack</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="dashboard.html" class="nav__link">Dashboard</a>
+                    <a href="listagem.html" class="nav__link">Meus Hábitos</a>
+                    <a href="login.html" class="nav__link">Sair</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header__content">
+                    <div class="breadcrumb">
+                        <a href="listagem.html" class="breadcrumb-link">Meus Hábitos</a>
+                        <span class="breadcrumb-separator">/</span>
+                        <span class="breadcrumb-current">Novo Hábito</span>
+                    </div>
+                    <h1>Criar novo hábito</h1>
+                    <p>Defina seu novo hábito e comece sua jornada de transformação</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="form-section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-card">
+                        <div class="form-header">
+                            <h2>Informações do hábito</h2>
+                            <p>Preencha os dados abaixo para criar seu novo hábito</p>
+                        </div>
+
+                        <form class="new-habit-form" id="newHabitForm" action="listagem.html" method="get">
+                            <div class="form-group">
+                                <label for="habitName" class="form-label">
+                                    Nome do hábito *
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="habitName" 
+                                    name="habitName" 
+                                    class="form-input" 
+                                    placeholder="Ex: Beber água, Exercitar-se, Ler livros"
+                                    required
+                                    maxlength="50"
+                                >
+                                <small class="form-hint">Escolha um nome claro e motivador para seu hábito</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="habitDescription" class="form-label">
+                                    Descrição
+                                </label>
+                                <textarea 
+                                    id="habitDescription" 
+                                    name="habitDescription" 
+                                    class="form-input" 
+                                    rows="3"
+                                    placeholder="Descreva seu hábito e por que ele é importante para você..."
+                                    maxlength="200"
+                                ></textarea>
+                                <small class="form-hint">Opcional: Adicione detalhes sobre seu hábito</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="habitCategory" class="form-label">
+                                    Categoria *
+                                </label>
+                                <select id="habitCategory" name="habitCategory" class="form-input" required>
+                                    <option value="">Selecione uma categoria</option>
+                                    <option value="saude">🏥 Saúde</option>
+                                    <option value="produtividade">⚡ Produtividade</option>
+                                    <option value="financeiro">💰 Financeiro</option>
+                                    <option value="pessoal">👤 Pessoal</option>
+                                    <option value="estudos">📚 Estudos</option>
+                                    <option value="social">👥 Social</option>
+                                    <option value="criatividade">🎨 Criatividade</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="habitFrequency" class="form-label">
+                                    Frequência *
+                                </label>
+                                <select id="habitFrequency" name="habitFrequency" class="form-input" required>
+                                    <option value="">Com que frequência?</option>
+                                    <option value="diario">📅 Diário</option>
+                                    <option value="semanal">📆 Semanal</option>
+                                    <option value="mensal">🗓️ Mensal</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="habitGoal" class="form-label">
+                                    Meta diária
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="habitGoal" 
+                                    name="habitGoal" 
+                                    class="form-input" 
+                                    placeholder="Ex: 8 copos, 30 minutos, 20 páginas"
+                                >
+                                <small class="form-hint">Opcional: Defina uma meta específica para seu hábito</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="habitTime" class="form-label">
+                                    Horário preferido
+                                </label>
+                                <select id="habitTime" name="habitTime" class="form-input">
+                                    <option value="">Qualquer horário</option>
+                                    <option value="manha">🌅 Manhã (6h - 12h)</option>
+                                    <option value="tarde">☀️ Tarde (12h - 18h)</option>
+                                    <option value="noite">🌙 Noite (18h - 24h)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-checkbox">
+                                    <input type="checkbox" id="habitReminder" name="habitReminder" checked>
+                                    <label for="habitReminder">
+                                        <strong>Ativar lembretes</strong>
+                                        <small>Receba notificações para não esquecer seu hábito</small>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-checkbox">
+                                    <input type="checkbox" id="habitPublic" name="habitPublic">
+                                    <label for="habitPublic">
+                                        <strong>Tornar público</strong>
+                                        <small>Compartilhe seu progresso com outros usuários (opcional)</small>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <a href="listagem.html" class="btn btn--ghost">
+                                    Cancelar
+                                </a>
+                                <button type="submit" class="btn btn--primary">
+                                    Criar hábito
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="tips-card">
+                        <div class="tips-header">
+                            <h3>💡 Dicas para criar um hábito duradouro</h3>
+                        </div>
+                        <div class="tips-content">
+                            <div class="tip-item">
+                                <div class="tip-icon">🎯</div>
+                                <div class="tip-text">
+                                    <strong>Seja específico</strong>
+                                    <p>Em vez de "exercitar-se", use "caminhar 30 minutos"</p>
+                                </div>
+                            </div>
+                            <div class="tip-item">
+                                <div class="tip-icon">📏</div>
+                                <div class="tip-text">
+                                    <strong>Comece pequeno</strong>
+                                    <p>Hábitos pequenos são mais fáceis de manter</p>
+                                </div>
+                            </div>
+                            <div class="tip-item">
+                                <div class="tip-icon">⏰</div>
+                                <div class="tip-text">
+                                    <strong>Defina um horário</strong>
+                                    <p>Hábitos com horário fixo têm mais chance de sucesso</p>
+                                </div>
+                            </div>
+                            <div class="tip-item">
+                                <div class="tip-icon">🔗</div>
+                                <div class="tip-text">
+                                    <strong>Conecte com rotina</strong>
+                                    <p>Associe seu hábito a algo que já faz regularmente</p>
+                                </div>
+                            </div>
+                            <div class="tip-item">
+                                <div class="tip-icon">🎉</div>
+                                <div class="tip-text">
+                                    <strong>Celebre pequenas vitórias</strong>
+                                    <p>Cada dia concluído é uma conquista!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples Section -->
+        <section class="examples-section">
+            <div class="container">
+                <div class="examples-header">
+                    <h3>Exemplos de hábitos populares</h3>
+                    <p>Inspire-se com estes exemplos para criar seu próprio hábito</p>
+                </div>
+                <div class="examples-grid">
+                    <div class="example-card" onclick="fillExample('Beber água', 'Beber pelo menos 8 copos de água por dia', 'saude', 'diario', '8 copos')">
+                        <div class="example-icon">💧</div>
+                        <div class="example-content">
+                            <h4>Beber água</h4>
+                            <p>8 copos por dia</p>
+                        </div>
+                    </div>
+                    <div class="example-card" onclick="fillExample('Exercitar-se', 'Fazer pelo menos 30 minutos de atividade física', 'saude', 'diario', '30 minutos')">
+                        <div class="example-icon">🏃‍♂️</div>
+                        <div class="example-content">
+                            <h4>Exercitar-se</h4>
+                            <p>30 min de atividade</p>
+                        </div>
+                    </div>
+                    <div class="example-card" onclick="fillExample('Leitura', 'Ler pelo menos 20 páginas de um livro', 'estudos', 'diario', '20 páginas')">
+                        <div class="example-icon">📚</div>
+                        <div class="example-content">
+                            <h4>Leitura</h4>
+                            <p>20 páginas por dia</p>
+                        </div>
+                    </div>
+                    <div class="example-card" onclick="fillExample('Meditação', 'Praticar meditação por 10 minutos', 'pessoal', 'diario', '10 minutos')">
+                        <div class="example-icon">🧘‍♀️</div>
+                        <div class="example-content">
+                            <h4>Meditação</h4>
+                            <p>10 min diários</p>
+                        </div>
+                    </div>
+                    <div class="example-card" onclick="fillExample('Economizar', 'Guardar R$ 20,00 por dia', 'financeiro', 'diario', 'R$ 20,00')">
+                        <div class="example-icon">💰</div>
+                        <div class="example-content">
+                            <h4>Economizar</h4>
+                            <p>R$ 20,00 por dia</p>
+                        </div>
+                    </div>
+                    <div class="example-card" onclick="fillExample('Diário', 'Escrever uma página no diário', 'pessoal', 'diario', '1 página')">
+                        <div class="example-icon">📝</div>
+                        <div class="example-content">
+                            <h4>Diário</h4>
+                            <p>1 página por dia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__text">
+                    © 2024 GrowTrack - Plataforma de Controle de Hábitos
+                </p>
+                <p class="footer__text">
+                    Desenvolvido por <a href="#" class="footer__link">Guilherme Aquino</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        /* Estilos específicos da página de novo hábito */
+        .page-header {
+            padding: var(--spacing-8) 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+        }
+
+        .page-header__content {
+            text-align: center;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-2);
+            margin-bottom: var(--spacing-4);
+            font-size: var(--font-size-sm);
+        }
+
+        .breadcrumb-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+
+        .breadcrumb-link:hover {
+            color: var(--white);
+        }
+
+        .breadcrumb-separator {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .breadcrumb-current {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        .page-header__content h1 {
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            margin-bottom: var(--spacing-3);
+            color: var(--white);
+        }
+
+        .page-header__content p {
+            font-size: var(--font-size-lg);
+            opacity: 0.9;
+        }
+
+        .form-section {
+            padding: var(--spacing-8) 0;
+            background: var(--light-neutral);
+        }
+
+        .form-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-8);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .form-card {
+            background: var(--white);
+            padding: var(--spacing-8);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: var(--spacing-8);
+        }
+
+        .form-header h2 {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            color: var(--dark-neutral);
+            margin-bottom: var(--spacing-3);
+        }
+
+        .form-header p {
+            color: var(--gray-600);
+            font-size: var(--font-size-lg);
+        }
+
+        .new-habit-form .form-group {
+            margin-bottom: var(--spacing-6);
+        }
+
+        .form-hint {
+            display: block;
+            font-size: var(--font-size-sm);
+            color: var(--gray-500);
+            margin-top: var(--spacing-1);
+        }
+
+        .form-checkbox label {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-1);
+        }
+
+        .form-checkbox label strong {
+            color: var(--dark-neutral);
+        }
+
+        .form-checkbox label small {
+            color: var(--gray-500);
+            font-size: var(--font-size-xs);
+        }
+
+        .form-actions {
+            display: flex;
+            gap: var(--spacing-4);
+            justify-content: flex-end;
+            margin-top: var(--spacing-8);
+            padding-top: var(--spacing-6);
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .tips-card {
+            background: var(--white);
+            padding: var(--spacing-8);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            height: fit-content;
+            position: sticky;
+            top: var(--spacing-8);
+        }
+
+        .tips-header {
+            margin-bottom: var(--spacing-6);
+        }
+
+        .tips-header h3 {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--dark-neutral);
+        }
+
+        .tips-content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-4);
+        }
+
+        .tip-item {
+            display: flex;
+            gap: var(--spacing-3);
+            align-items: flex-start;
+        }
+
+        .tip-icon {
+            font-size: var(--font-size-lg);
+            flex-shrink: 0;
+            margin-top: var(--spacing-1);
+        }
+
+        .tip-text strong {
+            display: block;
+            color: var(--dark-neutral);
+            font-weight: 600;
+            margin-bottom: var(--spacing-1);
+        }
+
+        .tip-text p {
+            color: var(--gray-600);
+            font-size: var(--font-size-sm);
+            margin: 0;
+        }
+
+        .examples-section {
+            padding: var(--spacing-8) 0;
+            background: var(--white);
+        }
+
+        .examples-header {
+            text-align: center;
+            margin-bottom: var(--spacing-8);
+        }
+
+        .examples-header h3 {
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+            color: var(--dark-neutral);
+            margin-bottom: var(--spacing-3);
+        }
+
+        .examples-header p {
+            color: var(--gray-600);
+            font-size: var(--font-size-lg);
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-4);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .example-card {
+            background: var(--white);
+            padding: var(--spacing-4);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            border: 2px solid var(--gray-200);
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .example-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .example-icon {
+            font-size: var(--font-size-3xl);
+            margin-bottom: var(--spacing-3);
+        }
+
+        .example-content h4 {
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            color: var(--dark-neutral);
+            margin-bottom: var(--spacing-1);
+        }
+
+        .example-content p {
+            font-size: var(--font-size-sm);
+            color: var(--gray-600);
+            margin: 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 900px) {
+            .form-container {
+                grid-template-columns: 1fr;
+            }
+
+            .tips-card {
+                position: static;
+            }
+
+            .examples-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .page-header__content h1 {
+                font-size: var(--font-size-2xl);
+            }
+
+            .form-card {
+                padding: var(--spacing-6);
+            }
+
+            .form-header h2 {
+                font-size: var(--font-size-xl);
+            }
+
+            .form-actions {
+                flex-direction: column;
+            }
+
+            .form-actions .btn {
+                width: 100%;
+            }
+
+            .tips-card {
+                padding: var(--spacing-6);
+            }
+
+            .examples-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script>
+        function fillExample(name, description, category, frequency, goal) {
+            document.getElementById('habitName').value = name;
+            document.getElementById('habitDescription').value = description;
+            document.getElementById('habitCategory').value = category;
+            document.getElementById('habitFrequency').value = frequency;
+            document.getElementById('habitGoal').value = goal;
+            
+            // Feedback visual
+            const form = document.getElementById('newHabitForm');
+            form.style.transform = 'scale(1.02)';
+            setTimeout(() => {
+                form.style.transform = '';
+            }, 200);
+        }
+
+        // Validação do formulário
+        document.getElementById('newHabitForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const habitName = formData.get('habitName');
+            
+            // Simular criação do hábito
+            alert(`Hábito "${habitName}" criado com sucesso!`);
+            
+            // Redirecionar para a listagem
+            window.location.href = 'listagem.html';
+        });
+
+        // Contador de caracteres
+        const descriptionTextarea = document.getElementById('habitDescription');
+        const nameInput = document.getElementById('habitName');
+        
+        function updateCharCount(input, maxLength) {
+            const currentLength = input.value.length;
+            const remaining = maxLength - currentLength;
+            
+            let hint = input.parentNode.querySelector('.form-hint');
+            if (!hint) {
+                hint = document.createElement('small');
+                hint.className = 'form-hint';
+                input.parentNode.appendChild(hint);
+            }
+            
+            if (remaining < 20) {
+                hint.style.color = remaining < 0 ? '#EF4444' : '#D97706';
+            } else {
+                hint.style.color = 'var(--gray-500)';
+            }
+        }
+        
+        nameInput.addEventListener('input', () => updateCharCount(nameInput, 50));
+        descriptionTextarea.addEventListener('input', () => updateCharCount(descriptionTextarea, 200));
+    </script>
+</body>
+</html>

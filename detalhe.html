@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Hábito - GrowTrack</title>
+    <meta name="description" content="Visualize e edite os detalhes do seu hábito no GrowTrack.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS Específico da Página -->
+    <link rel="stylesheet" href="css/detalhe.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="GrowTrack Logo">
+                    <span>GrowTrack</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="dashboard.html" class="nav__link">Dashboard</a>
+                    <a href="listagem.html" class="nav__link">Meus Hábitos</a>
+                    <a href="login.html" class="nav__link">Sair</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header__content">
+                    <div class="breadcrumb">
+                        <a href="listagem.html" class="breadcrumb-link">Meus Hábitos</a>
+                        <span class="breadcrumb-separator">/</span>
+                        <span class="breadcrumb-current">Beber água</span>
+                    </div>
+                    <h1>Beber água</h1>
+                    <p>8 copos por dia • Categoria: Saúde</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habit Details -->
+        <section class="habit-details-section">
+            <div class="container">
+                <div class="details-grid">
+                    <!-- Left Column - Habit Info -->
+                    <div class="details-left">
+                        <div class="habit-info-card">
+                            <div class="habit-header">
+                                <div class="habit-icon-large">💧</div>
+                                <div class="habit-title-section">
+                                    <h2>Beber água</h2>
+                                    <div class="habit-meta">
+                                        <span class="badge badge--primary">Saúde</span>
+                                        <span class="badge badge--success">Ativo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="habit-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">15</div>
+                                    <div class="stat-label">Dias de streak</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">89%</div>
+                                    <div class="stat-label">Taxa de sucesso</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">120</div>
+                                    <div class="stat-label">Total de dias</div>
+                                </div>
+                            </div>
+
+                            <div class="habit-description">
+                                <h3>Descrição</h3>
+                                <p>Beber pelo menos 8 copos de água por dia para manter a hidratação adequada e melhorar a saúde geral.</p>
+                            </div>
+
+                            <div class="habit-settings">
+                                <h3>Configurações</h3>
+                                <div class="settings-list">
+                                    <div class="setting-item">
+                                        <span class="setting-label">Frequência:</span>
+                                        <span class="setting-value">Diário</span>
+                                    </div>
+                                    <div class="setting-item">
+                                        <span class="setting-label">Meta diária:</span>
+                                        <span class="setting-value">8 copos</span>
+                                    </div>
+                                    <div class="setting-item">
+                                        <span class="setting-label">Horário preferido:</span>
+                                        <span class="setting-value">Manhã e tarde</span>
+                                    </div>
+                                    <div class="setting-item">
+                                        <span class="setting-label">Lembrete:</span>
+                                        <span class="setting-value">Ativado</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Edit Form -->
+                    <div class="details-right">
+                        <div class="edit-form-card">
+                            <div class="form-header">
+                                <h3>Editar hábito</h3>
+                                <button class="btn btn--ghost btn--sm" onclick="toggleEditMode()">
+                                    <span id="editToggleText">Editar</span>
+                                </button>
+                            </div>
+
+                            <form class="habit-form" id="habitForm">
+                                <div class="form-group">
+                                    <label for="habitName" class="form-label">Nome do hábito</label>
+                                    <input 
+                                        type="text" 
+                                        id="habitName" 
+                                        name="habitName" 
+                                        class="form-input" 
+                                        value="Beber água"
+                                        disabled
+                                        required
+                                    >
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="habitDescription" class="form-label">Descrição</label>
+                                    <textarea 
+                                        id="habitDescription" 
+                                        name="habitDescription" 
+                                        class="form-input" 
+                                        rows="3"
+                                        disabled
+                                        required
+                                    >Beber pelo menos 8 copos de água por dia para manter a hidratação adequada e melhorar a saúde geral.</textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="habitCategory" class="form-label">Categoria</label>
+                                    <select id="habitCategory" name="habitCategory" class="form-input" disabled required>
+                                        <option value="saude" selected>Saúde</option>
+                                        <option value="produtividade">Produtividade</option>
+                                        <option value="financeiro">Financeiro</option>
+                                        <option value="pessoal">Pessoal</option>
+                                        <option value="estudos">Estudos</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="habitFrequency" class="form-label">Frequência</label>
+                                    <select id="habitFrequency" name="habitFrequency" class="form-input" disabled required>
+                                        <option value="diario" selected>Diário</option>
+                                        <option value="semanal">Semanal</option>
+                                        <option value="mensal">Mensal</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="habitGoal" class="form-label">Meta diária</label>
+                                    <input 
+                                        type="text" 
+                                        id="habitGoal" 
+                                        name="habitGoal" 
+                                        class="form-input" 
+                                        value="8 copos"
+                                        disabled
+                                        required
+                                    >
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-checkbox">
+                                        <input type="checkbox" id="habitReminder" name="habitReminder" checked disabled>
+                                        <label for="habitReminder">Ativar lembretes</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions" id="formActions" style="display: none;">
+                                    <button type="button" class="btn btn--ghost" onclick="cancelEdit()">Cancelar</button>
+                                    <button type="submit" class="btn btn--primary">Salvar alterações</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="quick-actions">
+                            <div class="quick-actions-header">
+                                <h3>Ações rápidas</h3>
+                            </div>
+                            <div class="quick-actions-grid">
+                                <button class="action-btn action-btn--primary" onclick="markTodayComplete()">
+                                    <div class="action-icon">✓</div>
+                                    <div class="action-text">
+                                        <span class="action-title">Marcar hoje</span>
+                                        <span class="action-subtitle">Concluído</span>
+                                    </div>
+                                </button>
+                                <button class="action-btn action-btn--secondary" onclick="viewHistory()">
+                                    <div class="action-icon">📊</div>
+                                    <div class="action-text">
+                                        <span class="action-title">Histórico</span>
+                                        <span class="action-subtitle">Ver completo</span>
+                                    </div>
+                                </button>
+                                <button class="action-btn action-btn--danger" onclick="deleteHabit()">
+                                    <div class="action-icon">🗑️</div>
+                                    <div class="action-text">
+                                        <span class="action-title">Excluir</span>
+                                        <span class="action-subtitle">Remover hábito</span>
+                                    </div>
+                                </button>
+                                <button class="action-btn action-btn--success" id="activateHabitBtn" onclick="activateHabit()">
+                                    <div class="action-icon">▶️</div>
+                                    <div class="action-text">
+                                        <span class="action-title">Ativar</span>
+                                        <span class="action-subtitle">Retomar hábito</span>
+                                    </div>
+                                </button>
+                                <button class="action-btn action-btn--warning" id="pauseHabitBtn" onclick="pauseHabit()">
+                                    <div class="action-icon">⏸️</div>
+                                    <div class="action-text">
+                                        <span class="action-title">Pausar</span>
+                                        <span class="action-subtitle">Interromper hábito</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section class="history-section">
+            <div class="container">
+                <div class="history-card">
+                    <div class="history-header">
+                        <h3>Histórico recente</h3>
+                        <div class="history-stats">
+                            <span class="history-stat">Últimos 7 dias: 6/7</span>
+                            <span class="history-stat">Melhor streak: 20 dias</span>
+                        </div>
+                    </div>
+                    
+                    <div class="history-calendar">
+                        <div class="calendar-grid">
+                            <div class="calendar-day completed" title="Concluído">
+                                <div class="day-number">1</div>
+                                <div class="day-status">✓</div>
+                            </div>
+                            <div class="calendar-day completed" title="Concluído">
+                                <div class="day-number">2</div>
+                                <div class="day-status">✓</div>
+                            </div>
+                            <div class="calendar-day completed" title="Concluído">
+                                <div class="day-number">3</div>
+                                <div class="day-status">✓</div>
+                            </div>
+                            <div class="calendar-day completed" title="Concluído">
+                                <div class="day-number">4</div>
+                                <div class="day-status">✓</div>
+                            </div>
+                            <div class="calendar-day completed" title="Concluído">
+                                <div class="day-number">5</div>
+                                <div class="day-status">✓</div>
+                            </div>
+                            <div class="calendar-day completed" title="Concluído">
+                                <div class="day-number">6</div>
+                                <div class="day-status">✓</div>
+                            </div>
+                            <div class="calendar-day today" title="Hoje">
+                                <div class="day-number">7</div>
+                                <div class="day-status">✓</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="history-list">
+                        <div class="history-item">
+                            <div class="history-date">Hoje</div>
+                            <div class="history-action">8/8 copos concluídos</div>
+                            <div class="history-time">14:30</div>
+                        </div>
+                        <div class="history-item">
+                            <div class="history-date">Ontem</div>
+                            <div class="history-action">8/8 copos concluídos</div>
+                            <div class="history-time">15:45</div>
+                        </div>
+                        <div class="history-item">
+                            <div class="history-date">2 dias atrás</div>
+                            <div class="history-action">7/8 copos concluídos</div>
+                            <div class="history-time">16:20</div>
+                        </div>
+                        <div class="history-item">
+                            <div class="history-date">3 dias atrás</div>
+                            <div class="history-action">8/8 copos concluídos</div>
+                            <div class="history-time">14:10</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__text">
+                    © 2024 GrowTrack - Plataforma de Controle de Hábitos
+                </p>
+                <p class="footer__text">
+                    Desenvolvido por <a href="#" class="footer__link">Guilherme Aquino</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de confirmação -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Confirmar exclusão</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Tem certeza que deseja excluir o hábito "Beber água"? Esta ação não pode ser desfeita e todo o histórico será perdido.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--ghost" onclick="closeModal()">Cancelar</button>
+                <button class="btn btn--danger" onclick="confirmDelete()">Excluir hábito</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let isEditMode = false;
+
+        function toggleEditMode() {
+            const form = document.getElementById('habitForm');
+            const inputs = form.querySelectorAll('input, textarea, select');
+            const actions = document.getElementById('formActions');
+            const toggleText = document.getElementById('editToggleText');
+
+            isEditMode = !isEditMode;
+
+            if (isEditMode) {
+                inputs.forEach(input => input.disabled = false);
+                actions.style.display = 'flex';
+                toggleText.textContent = 'Cancelar';
+            } else {
+                inputs.forEach(input => input.disabled = true);
+                actions.style.display = 'none';
+                toggleText.textContent = 'Editar';
+            }
+        }
+
+        function cancelEdit() {
+            if (isEditMode) {
+                toggleEditMode();
+            }
+        }
+
+        function markTodayComplete() {
+            const todayCell = document.querySelector('.calendar-day.today');
+            if (todayCell && !todayCell.classList.contains('completed')) {
+                todayCell.classList.add('completed');
+                todayCell.title = 'Concluído hoje';
+                
+                // Feedback visual
+                todayCell.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    todayCell.style.transform = '';
+                }, 200);
+            }
+        }
+
+        function viewHistory() {
+            alert('Funcionalidade de histórico completo será implementada em uma versão futura.');
+        }
+
+        function deleteHabit() {
+            document.getElementById('deleteModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('deleteModal').style.display = 'none';
+        }
+
+        function confirmDelete() {
+            alert('Hábito excluído com sucesso!');
+            window.location.href = 'listagem.html';
+        }
+
+        // Fechar modal ao clicar fora
+        window.onclick = function(event) {
+            const modal = document.getElementById('deleteModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Submissão do formulário
+        document.getElementById('habitForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Hábito atualizado com sucesso!');
+            toggleEditMode();
+        });
+    </script>
+</body>
+</html>

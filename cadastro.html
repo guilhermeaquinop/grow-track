@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - GrowTrack</title>
+    <meta name="description" content="Crie sua conta gratuita no GrowTrack e comece a desenvolver hábitos positivos hoje mesmo.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS Específico da Página -->
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="GrowTrack Logo">
+                    <span>GrowTrack</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="dashboard.html" class="nav__link">Dashboard</a>
+                    <a href="login.html" class="nav__link">Entrar</a>
+                    <a href="cadastro.html" class="nav__link nav__link--active">Cadastro</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-container">
+                    <div class="auth-card">
+                        <div class="auth-header">
+                            <h1>Crie sua conta</h1>
+                            <p>Junte-se ao GrowTrack e comece a transformar sua vida hoje</p>
+                        </div>
+
+                        <form class="auth-form" action="dashboard.html" method="get">
+                            <div class="form-group">
+                                <label for="fullName" class="form-label">Nome completo</label>
+                                <input 
+                                    type="text" 
+                                    id="fullName" 
+                                    name="fullName" 
+                                    class="form-input" 
+                                    placeholder="Seu nome completo"
+                                    required
+                                    autocomplete="name"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    class="form-input" 
+                                    placeholder="seu@email.com"
+                                    required
+                                    autocomplete="email"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password" class="form-label">Senha</label>
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    name="password" 
+                                    class="form-input" 
+                                    placeholder="Mínimo 8 caracteres"
+                                    required
+                                    minlength="8"
+                                    autocomplete="new-password"
+                                >
+                                <small class="form-hint">A senha deve ter pelo menos 8 caracteres</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirmPassword" class="form-label">Confirmar senha</label>
+                                <input 
+                                    type="password" 
+                                    id="confirmPassword" 
+                                    name="confirmPassword" 
+                                    class="form-input" 
+                                    placeholder="Digite a senha novamente"
+                                    required
+                                    autocomplete="new-password"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-checkbox">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <label for="terms">
+                                        Aceito os <a href="#" class="auth-link">Termos de Uso</a> e 
+                                        <a href="#" class="auth-link">Política de Privacidade</a>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-checkbox">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <label for="newsletter">
+                                        Quero receber dicas e novidades por e-mail (opcional)
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn--primary btn--lg auth-submit">
+                                Criar conta gratuita
+                            </button>
+                        </form>
+
+                        <div class="auth-footer">
+                            <p>
+                                Já tem uma conta? 
+                                <a href="login.html" class="auth-link">Faça login aqui</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="auth-illustration">
+                        <div class="illustration-content">
+                            <div class="illustration-icon">🚀</div>
+                            <h3>Comece sua transformação</h3>
+                            <p>Com o GrowTrack, você terá todas as ferramentas necessárias para desenvolver e manter hábitos positivos.</p>
+                            
+                            <div class="benefits-list">
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">✅</div>
+                                    <div class="benefit-text">Acompanhamento visual do progresso</div>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">✅</div>
+                                    <div class="benefit-text">Sistema de streaks motivacional</div>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">✅</div>
+                                    <div class="benefit-text">Hábitos personalizados para qualquer área</div>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">✅</div>
+                                    <div class="benefit-text">Interface simples e intuitiva</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__text">
+                    © 2024 GrowTrack - Plataforma de Controle de Hábitos
+                </p>
+                <p class="footer__text">
+                    Desenvolvido por <a href="#" class="footer__link">Guilherme Aquino</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Validação de confirmação de senha
+        document.addEventListener('DOMContentLoaded', function() {
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirmPassword');
+            const form = document.querySelector('.auth-form');
+
+            function validatePassword() {
+                if (password.value !== confirmPassword.value) {
+                    confirmPassword.setCustomValidity('As senhas não coincidem');
+                    confirmPassword.classList.add('form-input--error');
+                } else {
+                    confirmPassword.setCustomValidity('');
+                    confirmPassword.classList.remove('form-input--error');
+                }
+            }
+
+            password.addEventListener('input', validatePassword);
+            confirmPassword.addEventListener('input', validatePassword);
+
+            form.addEventListener('submit', function(e) {
+                if (password.value !== confirmPassword.value) {
+                    e.preventDefault();
+                    alert('As senhas não coincidem. Por favor, verifique e tente novamente.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
