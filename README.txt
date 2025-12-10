@@ -16,6 +16,18 @@ produtividade, finanças, estudos, bem-estar ou lazer. O sistema permite que o
 usuário crie metas e registre seu progresso de forma simples e visual, 
 acompanhando a consistência ao longo do tempo por meio de gráficos e indicadores.
 
+📸 Screenshots do Sistema
+==========================
+
+Todas as screenshots estão disponíveis na pasta docs/screenshots/:
+
+• Landing Page: docs/screenshots/landing-page.png
+• Página de Login: docs/screenshots/login.png
+• Página de Cadastro: docs/screenshots/cadastro.png
+• Dashboard: docs/screenshots/dashboard.png
+• Lista de Hábitos: docs/screenshots/lista-habitos.png
+• Cadastro de Hábito: docs/screenshots/cadastro-habito.png
+
 🚀 Tecnologias
 ==============
 
@@ -71,36 +83,48 @@ Veja a seção "🛠️ Instalação e Configuração" abaixo.
    • Seção hero com call-to-action
    • Cards de benefícios e funcionalidades
    • Design responsivo e moderno
+   
+   📸 Screenshot: docs/screenshots/landing-page.png
 
 ✅ login.html - Página de Login
    • Formulário de autenticação
    • Validação HTML5 (email, senha)
    • Link para cadastro e recuperação
    • Preview de estatísticas do usuário
+   
+   📸 Screenshot: docs/screenshots/login.png
 
 ✅ cadastro.html - Página de Cadastro
    • Formulário completo de registro
    • Validação de confirmação de senha
    • Checkbox de termos e newsletter
    • Dicas visuais de benefícios
+   
+   📸 Screenshot: docs/screenshots/cadastro.png
 
 ✅ dashboard.html - Dashboard Principal
    • Resumo de estatísticas pessoais
    • Gráfico de progresso dos últimos 7 dias
    • Lista de hábitos do dia atual
    • Ações rápidas para marcar conclusões
+   
+   📸 Screenshot: docs/screenshots/dashboard.png
 
 ✅ listagem.html - Lista de Hábitos
    • Tabela completa de todos os hábitos
    • Filtros por categoria e status
    • Ações de editar e excluir
    • Modal de confirmação para exclusões
+   
+   📸 Screenshot: docs/screenshots/lista-habitos.png
 
 ✅ novo-habito.html - Criar Novo Hábito
    • Formulário completo de criação
    • Seção de dicas para hábitos duradouros
    • Exemplos interativos de hábitos populares
    • Validação e feedback visual
+   
+   📸 Screenshot: docs/screenshots/cadastro-habito.png
 
 ✅ detalhe.html - Detalhes do Hábito
    • Visualização completa do hábito
