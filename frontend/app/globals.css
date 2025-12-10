@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #2F80ED;
+  --secondary-color: #10B981;
+  --dark-neutral: #0F172A;
+  --light-neutral: #F8FAFC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--light-neutral);
+  color: var(--dark-neutral);
+}
+
+/* Garantir que inputs e textareas tenham background branco */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  border-color: #D1D5DB !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  outline: none !important;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+textarea::placeholder {
+  color: #9CA3AF !important;
+}
+
+/* Garantir que checkboxes tenham background branco */
+input[type="checkbox"] {
+  background-color: #FFFFFF !important;
+  border-color: #D1D5DB !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  min-height: 18px !important;
+  border: 2px solid #D1D5DB !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  position: relative !important;
+  flex-shrink: 0 !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #2F80ED !important;
+  border-color: #2F80ED !important;
+}
+
+input[type="checkbox"]:checked::before {
+  content: '✓' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  color: #FFFFFF !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  line-height: 1 !important;
+}
+
+input[type="checkbox"]:focus {
+  outline: 2px solid #2F80ED !important;
+  outline-offset: 2px !important;
+  ring: 2px !important;
+  ring-color: #2F80ED !important;
+}
+
+input[type="checkbox"]:hover {
+  border-color: #2F80ED !important;
+}
+

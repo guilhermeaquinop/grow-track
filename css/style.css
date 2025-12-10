@@ -162,11 +162,17 @@ a:hover {
   z-index: 100;
 }
 
+.header .container {
+  padding: 0 var(--spacing-4);
+}
+
 .header__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: var(--spacing-4) 0;
+  gap: var(--spacing-4);
+  width: 100%;
 }
 
 .logo {
@@ -201,6 +207,44 @@ a:hover {
 .nav__link--active {
   color: var(--primary-color);
   background-color: var(--gray-100);
+}
+
+/* ===== INDICADOR DE STATUS DO BANCO ===== */
+.db-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-3);
+  background-color: #FEF3C7;
+  color: #92400E;
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  margin-right: var(--spacing-4);
+  transition: var(--transition);
+}
+
+.db-status-indicator:hover {
+  background-color: #FDE68A;
+}
+
+.db-status-icon {
+  font-size: var(--font-size-base);
+}
+
+.db-status-text {
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .db-status-text {
+    display: none;
+  }
+  
+  .db-status-indicator {
+    margin-right: var(--spacing-2);
+    padding: var(--spacing-2);
+  }
 }
 
 /* ===== BOTÕES ===== */
